@@ -1,0 +1,20 @@
+Description='eduroam'
+Interface=wlan0
+Connection=wireless
+Security=wpa-configsection
+IP=dhcp
+WPAConfigSection=(
+	'ssid="eduroam"'
+	'key_mgmt=WPA-EAP'
+	'eap=TTLS'
+	'group=TKIP CCMP'
+	'proto=WPA RSN'
+	'mode=0'
+	'pairwise=TKIP CCMP'
+	'anonymous_identity="anonymous@ruhr-uni-bochum.de"'
+	'identity="$LOGIN@ruhr-uni-bochum.de"'
+	'password="$PASSWORD"'
+	'phase2="auth=MSCHAPV2"'
+	'ca_cert="/etc/ssl/certs/Deutsche_Telekom_Root_CA_2.pem"'
+	'subject_match="/C=DE/ST=Nordrhein-Westfalen/L=Bochum/O=Ruhr-Universitaet Bochum/OU=Network Operation Center/CN=radius.ruhr-uni-bochum.de"'
+)

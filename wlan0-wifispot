@@ -1,0 +1,17 @@
+Description='Unitymedia WifiSpot'
+Interface=wlan0
+Connection=wireless
+Security=wpa-configsection
+IP=dhcp
+WPAConfigSection=(
+	'ssid="Unitymedia WifiSpot"'
+	'key_mgmt=WPA-EAP'
+	'eap=TTLS'
+	'group=TKIP CCMP'
+	'proto=WPA RSN'
+	'mode=0'
+	'pairwise=TKIP CCMP'
+	'identity="unitymedia/$EMAIL'
+	'password="$PASSWORD"'
+	'phase2="auth=MSCHAPV2"'
+)
